@@ -16,14 +16,13 @@ apps=(
     imageoptim
     iterm2
     firefox
-    firefoxnightly
+    firefox-nightly
     google-chrome
     google-chrome-canary
     glimmerblocker
     hammerspoon
     kaleidoscope
     macdown
-    malwarebytes-anti-malware
     opera
     screenflow
     spotify
@@ -35,4 +34,4 @@ apps=(
 brew cask install "${apps[@]}"
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip qlimagesize webpquicklook suspicious-package

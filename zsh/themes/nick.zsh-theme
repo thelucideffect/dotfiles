@@ -6,7 +6,7 @@
 # # README
 #
 # In order for this theme to render correctly, you will need a
-# [Powerline-patched font](https://gist.github.com/1595572).
+# [Powerline-patched font](https://gist .github.com/1595572).
 #
 # In addition, I recommend the
 # [Solarized theme](https://github.com/altercation/solarized/) and, if you're
@@ -114,7 +114,7 @@ prompt_status() {
 }
 
 function battery_charge {
-  echo `~/bin/batcharge.py`
+  # echo `~/bin/batcharge.py`
 }
 
 ## Main prompt
