@@ -104,6 +104,12 @@ npm install -g trash-cli
 # the `push` command which copies the github compare URL to my clipboard is heaven
 bash < <( curl https://raw.githubusercontent.com/jamiew/git-friendly/master/install.sh)
 
+###############################################################################
+# VSCode                                                                      #
+###############################################################################
+
+$HOME/dotfiles/code/setup.sh
+
 
 ###############################################################################
 # Z                                                                           #
