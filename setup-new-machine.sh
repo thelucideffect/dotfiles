@@ -109,7 +109,7 @@ bash < <( curl https://raw.githubusercontent.com/jamiew/git-friendly/master/inst
 # VSCode                                                                      #
 ###############################################################################
 
-$HOME/dotfiles/code/setup.sh
+sh code/setup.sh
 
 
 ###############################################################################
