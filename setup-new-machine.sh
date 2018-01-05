@@ -104,6 +104,7 @@ npm install -g trash-cli
 # the `push` command which copies the github compare URL to my clipboard is heaven
 bash < <( curl https://raw.githubusercontent.com/jamiew/git-friendly/master/install.sh)
 
+
 ###############################################################################
 # VSCode                                                                      #
 ###############################################################################
@@ -132,13 +133,6 @@ chmod +x ~/z/z.sh
 
 # for the c alias (syntax highlighted cat)
 sudo easy_install Pygments
-
-
-###############################################################################
-# Atom                                                                        #
-###############################################################################
-
-ln -s /Applications/Atom.app/Contents/Resources/app/atom.sh /usr/local/bin/atom
 
 
 ###############################################################################
