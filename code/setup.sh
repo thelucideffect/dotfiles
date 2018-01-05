@@ -17,10 +17,5 @@ extensions=(
 
 code --install-extension "${extensions[@]}"
 
-echo "Installed vscode extenstions"
-
 # Add settings
-SETTINGS='$HOME/Library/Application Support/Code/User/settings.json'
-cat settings.json >> SETTINGS
-
-echo "Append settings.json"
+cat $HOME/dotfiles/code/settings.json >> $HOME/Library/Application\ Support/Code/User/settings.json
