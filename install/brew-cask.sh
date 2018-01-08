@@ -24,6 +24,7 @@ apps=(
     kaleidoscope
     macdown
     opera
+    postman
     screenflow
     spotify
     skype
