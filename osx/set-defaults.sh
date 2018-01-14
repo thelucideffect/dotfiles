@@ -202,6 +202,19 @@ defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
 # Disable the crash reporter
 defaults write com.apple.CrashReporter DialogType -string "none"
 
+# Use dark menu bar / dock
+defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
+
+# Don't create dreaded .DS_Store files.
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# New Finder windows points to My Documents
+defaults write com.apple.finder NewWindowTarget -string "PfDo"
+
+# Use plain text for new documents in TextEdit.app
+defaults write com.apple.TextEdit RichText -bool false
+
+
 ###############################################################################
 # SSD
 ###############################################################################
