@@ -1,4 +1,4 @@
-#!/bin/bash
+ #!/bin/bash
 
 # Create a new directory and enter it
 function md() {
@@ -151,7 +151,7 @@ webmify () {
 }
 
 # visual studio code. a la `subl`
-code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCodeInsiders" --args $*; }
+# code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCodeInsiders" --args $*; }
 
 # `shellswitch [bash |zsh]`
 #   Must be in /etc/shells
