@@ -30,6 +30,7 @@ apps=(
     skype
     slack
     vlc
+    hyper
 )
 
 brew cask install "${apps[@]}"
