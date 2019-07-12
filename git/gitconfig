@@ -149,6 +149,9 @@
       git tag $1; \
   }; f"
 
+  dad = !curl -H \"Accept: text/plain\" https://icanhazdadjoke.com/ && git add
+  rad = !echo \"(⌐■_■)\" && git add
+
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # So much color
@@ -185,7 +188,7 @@
         editor = code --wait
         abbrev = 12
         attributesfile = ~/.gitattributes
-        excludesfile = ~/.gitignore
+	excludesfile = /Users/feastit/.gitignore
         autocrlf = input
         mergeoptions = --no-edit
         ignorecase = false
@@ -255,5 +258,11 @@
 [fetch]
         prune = true
 [user]
-	email = declandr@gmail.com
+	email = declan@feast-it.com
 	name = Declan Ramsay
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
