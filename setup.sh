@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # https://github.com/kaicataldo/dotfiles/blob/master/bin/install.sh
 
@@ -6,7 +7,6 @@
 # It also symlinks ~/bin for easy updating
 
 # This is safe to run multiple times and will prompt you about anything unclear
-
 
 #
 # Utils
@@ -160,31 +160,24 @@ echo "done"
 # Actual symlink stuff
 #
 
-
-
 declare -a FILES_TO_SYMLINK=(
-
+  'shell/ackrc'
+  'shell/bash_profile'
+  'shell/bash_prompt'
+  'shell/bashrc'
+  'shell/curlrc'
+  'shell/inputrc'
+  'shell/screenrc'
   'shell/shell_aliases'
   'shell/shell_config'
   'shell/shell_exports'
   'shell/shell_functions'
-  'shell/bash_profile'
-  'shell/bash_prompt'
-  'shell/bashrc'
   'shell/zshrc'
-  'shell/ackrc'
-  'shell/curlrc'
-  'shell/gemrc'
-  'shell/inputrc'
-  'shell/screenrc'
 
   'git/gitattributes'
   'git/gitconfig'
   'git/gitignore'
-
 )
-
-# FILES_TO_SYMLINK="$FILES_TO_SYMLINK .vim bin" # add in vim and the binaries
 
 # Move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 
@@ -226,40 +219,6 @@ main() {
   done
 
   unset FILES_TO_SYMLINK
-
-  # Copy binaries
-  ln -fs $HOME/dotfiles/bin $HOME
-
-  declare -a BINARIES=(
-    'batcharge.py'
-    'crlf'
-    'dups'
-    'git-delete-merged-branches'
-    'nyan'
-    'passive'
-    'proofread'
-    'ssh-key'
-    'weasel'
-  )
-
-  for i in ${BINARIES[@]}; do
-    echo "Changing access permissions for binary script :: ${i##*/}"
-    chmod +rwx $HOME/bin/${i##*/}
-  done
-
-  unset BINARIES
-
-  # Symlink online-check.sh
-  ln -fs $HOME/dotfiles/lib/online-check.sh $HOME/online-check.sh
-
-  # Write out current crontab
-  crontab -l > mycron
-  # Echo new cron into cron file
-  echo "* * * * * ~/online-check.sh" >> mycron
-  # Install new cron file
-  crontab mycron
-  rm mycron
-
 }
 
 install_zsh () {
@@ -295,15 +254,6 @@ install_zsh () {
   fi
 }
 
-# Package managers & packages
-
-# . "$DOTFILES_DIR/install/brew.sh"
-# . "$DOTFILES_DIR/install/npm.sh"
-
-# if [ "$(uname)" == "Darwin" ]; then
-    # . "$DOTFILES_DIR/install/brew-cask.sh"
-# fi
-
 main
 install_zsh
 
@@ -312,7 +262,7 @@ install_zsh
 ###############################################################################
 
 # Install Zsh settings
-ln -s ~/dotfiles/zsh/themes/nick.zsh-theme $HOME/.oh-my-zsh/themes
+ln -s ~/dotfiles/zsh/themes/hyperzsh.zsh-theme $HOME/.oh-my-zsh/themes
 
 
 ###############################################################################
@@ -322,11 +272,10 @@ ln -s ~/dotfiles/zsh/themes/nick.zsh-theme $HOME/.oh-my-zsh/themes
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
-# Install the Solarized Dark theme for iTerm
-open "${HOME}/dotfiles/iterm/themes/Solarized Dark.itermcolors"
-
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 # Reload zsh settings
 source ~/.zshrc
+
+exit 0

@@ -101,3 +101,5 @@ source $ZSH/oh-my-zsh.sh
 
 # npm tab completion
 . <(npm completion)
+
+eval $(thefuck --alias)

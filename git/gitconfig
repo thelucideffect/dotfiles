@@ -258,7 +258,7 @@
 [fetch]
         prune = true
 [user]
-	email = declan@feast-it.com
+	email = declandr@gmail.com
 	name = Declan Ramsay
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"

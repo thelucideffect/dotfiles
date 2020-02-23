@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 #
 # Reasonably sets OS X defaults. My sources:
@@ -226,17 +227,7 @@ sudo pmset -a sms 0
 # Dock
 ###############################################################################
 
-# Show indicator lights for open applications in the Dock
-defaults write com.apple.dock show-process-indicators -bool true
-
-# Add several spacers
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
-
-# Automatically hide and show the Dock
-# defaults write com.apple.dock autohide -bool true
+sh ./dock-defaults.sh
 
 ###############################################################################
 # Do some clean up work.

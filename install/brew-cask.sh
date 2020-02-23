@@ -1,39 +1,40 @@
 #!/bin/bash
+set -e
 
 # Install Caskroom
 brew tap caskroom/cask
 brew install brew-cask
 brew tap caskroom/versions
+brew tap homebrew/cask-fonts
 
 # Install packages
 apps=(
-    1password
-    gyazo
-    spectacle
-    dash
-    visual-studio-code
-    imagealpha
-    imageoptim
-    iterm2
-    firefox
-    firefox-nightly
-    google-chrome
-    google-chrome-canary
-    glimmerblocker
-    hammerspoon
-    kaleidoscope
-    macdown
-    opera
-    postman
-    screenflow
-    spotify
-    skype
-    slack
-    vlc
-    hyper
+  1password
+  alfred
+  atom
+  dash
+  daisydisk
+  docker
+  font-fira-code
+  firefox
+  firefox-developer-edition
+  firefox-nightly
+  google-chrome
+  google-chrome-canary
+  hyper
+  imageoptim
+  macdown
+  postman
+  psquel
+  slack
+  sonos
+  spectacle
+  spotify
+  vanilla
+  visual-studio-code
+  vlc
 )
 
 brew cask install "${apps[@]}"
 
-# Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
-brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzip qlimagesize webpquicklook suspicious-package
+exit 0
