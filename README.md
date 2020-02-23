@@ -32,6 +32,17 @@ $ chmod +x setup.sh
 $ ./setup.sh
 ```
 
+## Install using curl
+
+```sh
+$ curl https://github.com/declanramsay/dotfiles/archive/master.zip --output ~/dotfiles.zip
+$ unzip dotfiles.zip -d .
+$ mv ~/dotfiles-master ~/dotfiles
+$ cd ~/dotfiles
+$ chmod +x setup.sh
+$ chmod +x setup-new-machine.sh
+$ ./setup-new-machine.sh
+```
 ## Remotely install using curl
 
 Alternatively, you can install this into `~/dotfiles` remotely without Git using curl:
