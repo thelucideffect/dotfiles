@@ -230,6 +230,15 @@ sudo pmset -a sms 0
 sh ./dock-defaults.sh
 
 ###############################################################################
+# Wallpaper
+###############################################################################
+
+curl -fsSL https://raw.githubusercontent.com/rgcr/m-cli/master/install.sh | sudo sh
+
+m wallpaper ~/dotfiles/personalization/backgrounds/firewatch-night.jpg
+# m wallpaper ~/dotfiles/personalization/backgrounds/midnight-synthwave.jpg
+
+###############################################################################
 # Do some clean up work.
 ###############################################################################
 

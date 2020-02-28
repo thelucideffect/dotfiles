@@ -6,22 +6,18 @@ This is a collection of dotfiles and scripts I use for customizing OS X to my li
 
 The setup script is smart enough to back up your existing dotfiles into a `~/dotfiles_old/` directory if you already have any dotfiles of the same name as the dotfile symlinks being created in your home directory.
 
-I also prefer `zsh` as my shell of choice. As such, the setup script will also clone the `oh-my-zsh` repository from my GitHub. It then checks to see if `zsh` is installed. If `zsh` is installed, and it is not already configured as the default shell, the setup script will execute a `chsh -s $(which zsh)` command. This changes the default shell to zsh, and takes effect as soon as a new zsh is spawned or on next login.
+There are two setup scripts - [setup.sh](setup.sh) and [setup-new-machine.sh](setup-new-machine.sh). Setup new machine is intended to be run once on a new machine and installs numerous applications, extensions, and while setup can be run multiple times it is dependent on the machine to already be setup. The final command of [setup-new-machine.sh](setup-new-machine.sh) is to call [setup.sh](setup.sh) so you don't need to run the scripts separately.
 
-So, to recap, the install script will:
+## Setup Features
 
-- back up any existing dotfiles in your home directory to `~/dotfiles_old/`
-- create symlinks to the dotfiles in `~/dotfiles/` in your home directory
-- clone the `oh-my-zsh` repository from my GitHub (for use with `zsh`)
-- check to see if `zsh` is installed, if it isn't, try to install it
-- if zsh is installed, run a `chsh -s` to set it as the default shell
-
-## Features
-
-- Git aliases
-- zsh aliases
-- Sensible [OS X defaults](osx/set-defaults.sh)
-- [Install script](setup.sh)
+- Critical tools like git, nvm, Python, Homebrew, yarn
+- Generates a SSH Key
+- Installs all my applications including VSCode with extensions and theme, Hyper for terminal, various version of Chrome + Firefox; Utility Applications like spectacle, vanilla, Alfred and essentially applications like Spotify and VLC
+- zsh with Oh-My-Zsh
+- Sensible OSX Defaults - including relacing default dock icons, hiding desktop files, setting the background
+- Git and zsh aliases (especially recommend `git rad` and `git dad`)
+- Back up any existing dotfiles in your home directory to `~/dotfiles_old/`
+- Create symlinks to the dotfiles in `~/dotfiles/` in your home directory
 
 ## Installation
 
@@ -32,7 +28,7 @@ $ chmod +x setup.sh
 $ ./setup.sh
 ```
 
-## Install using curl
+## Install using curl (especially new machines)
 
 ```sh
 $ curl https://github.com/declanramsay/dotfiles/archive/master.zip --output ~/dotfiles.zip
@@ -42,19 +38,6 @@ $ cd ~/dotfiles
 $ chmod +x setup.sh
 $ chmod +x setup-new-machine.sh
 $ ./setup-new-machine.sh
-```
-## Remotely install using curl
-
-Alternatively, you can install this into `~/dotfiles` remotely without Git using curl:
-
-```sh
-sh -c "`curl -fsSL https://raw.github.com/declanramsay/dotfiles/master/remote-setup.sh`"
-```
-
-Or, using wget:
-
-```sh
-sh -c "`wget -O - --no-check-certificate https://raw.githubusercontent.com/declanramsay/dotfiles/master/remote-setup.sh`"
 ```
 
 ## Customize

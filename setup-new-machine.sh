@@ -111,12 +111,6 @@ sudo easy_install Pygments
 
 sh osx/set-defaults.sh
 
-curl -fsSL https://raw.githubusercontent.com/rgcr/m-cli/master/install.sh | sudo sh
-
-m wallpaper ~/dotfiles/personalization/backgrounds/firewatch-night.jpg
-# m wallpaper ~/dotfiles/personalization/backgrounds/midnight-synthwave.jpg
-
-
 ###############################################################################
 # Symlinks to link dotfiles into ~/                                           #
 ###############################################################################
