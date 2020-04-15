@@ -111,12 +111,6 @@ defaults write -g KeyRepeat -int 0
 # Disable press-and-hold for keys in favor of key repeat.
 defaults write -g ApplePressAndHoldEnabled -bool false
 
-# Set language and text formats. (USD and Imperial Units)
-defaults write -g AppleLanguages -array "en" "nl"
-defaults write -g AppleLocale -string "en_US@currency=USD"
-defaults write -g AppleMeasurementUnits -string "Inches"
-defaults write -g AppleMetricUnits -bool false
-
 ###############################################################################
 # Screen
 ###############################################################################
@@ -243,9 +237,9 @@ m wallpaper ~/dotfiles/personalization/backgrounds/firewatch-night.jpg
 ###############################################################################
 
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
-           "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
-           "Terminal" "Twitter" "iCal"; do
-           kill all "${app}" > /dev/null 2>&1
+  "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
+  "Terminal" "Twitter" "iCal"; do
+  kill all "${app}" > /dev/null 2>&1
 done
 
 # Wait a bit before moving on...

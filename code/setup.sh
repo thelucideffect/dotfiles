@@ -4,24 +4,20 @@ set -e
 # Setup vscode
 
 declare -a EXTENSIONS=(
-  "dbaeumer.vscode-eslint"
-  "EQuimper.react-native-react-redux"
-  "eriklynd.json-tools"
-  "jeremyrajan.webpack"
-  "ms-python.python"
   "ms-vscode.atom-keybindings"
-  "vsmobile.vscode-react-native"
-  "eamodio.gitlens"
-  "ms-azuretools.vscode-docker"
   "ericadamski.carbon-now-sh"
-  "redhat.vscode-yaml"
-  "jpoissonnier.vscode-styled-components"
-  "robbowen.synthwave-vscode@0.0.7"
-  "johnpapa.vscode-peacock"
-  "pkief.material-icon-theme"
-  "bierner.markdown-emoji"
-  "oderwat.indent-rainbow"
   "be5invis.vscode-custom-css"
+  "ms-azuretools.vscode-docker"
+  "dbaeumer.vscode-eslint"
+  "eamodio.gitlens"
+  "oderwat.indent-rainbow"
+  "eriklynd.json-tools"
+  "bierner.markdown-emoji"
+  "pkief.material-icon-theme"
+  "johnpapa.vscode-peacock"
+  "robbowen.synthwave-vscode@0.0.7"
+  "jpoissonnier.vscode-styled-components"
+  "redhat.vscode-yaml"
 )
 
 for i in "${EXTENSIONS[@]}"; do
