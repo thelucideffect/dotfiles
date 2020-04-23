@@ -10,6 +10,7 @@ declare -a EXTENSIONS=(
   "ms-azuretools.vscode-docker"
   "dbaeumer.vscode-eslint"
   "eamodio.gitlens"
+  "wix.vscode-import-cost"
   "oderwat.indent-rainbow"
   "eriklynd.json-tools"
   "bierner.markdown-emoji"
