@@ -30,6 +30,8 @@ $ ./setup.sh
 
 ## Install using curl (especially new machines)
 
+- N.B. Make sure to edit [VSCode Settings](code/settings.json) for `vscode_custom_css.imports` to point to the correct path before running the final command
+
 ```sh
 $ curl https://github.com/declanramsay/dotfiles/archive/master.zip --output ~/dotfiles.zip
 $ unzip dotfiles.zip -d .
